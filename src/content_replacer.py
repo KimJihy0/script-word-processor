@@ -5,5 +5,5 @@ def replace_iterating_paragraphs(doc: Document, replace_map: dict[str, str]) -> 
         for run in para.runs:
             for k, v in replace_map.items():
                 if k in run.text:
-                    run.text = run.text.replace_iterating_paragraphs(k, v)
+                    run.text = run.text.replace(k, v)
     return doc
